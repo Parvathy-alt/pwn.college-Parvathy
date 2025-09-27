@@ -61,7 +61,13 @@ We have to run the challenge from the `/challenge` directory and we should expli
 `./run`
 Flag : `pwn.college{kOwDEASySkSTGL_AmKspbkiSxBL.dFTN1QDLwgTN0czW}`
 
+## Home Sweet Home 
 
+In this challenge we are asked to run the command `/challenge/run` in some absolute path of some direcotry , we can use `~` as a expansion of 
+home directory 
+We run the following command to attain the flag ,
+`/challenge/run ~/h` where is the `h` is the file that I specifiy as an arugment 
+Flag : `pwn.college{E8oTro5nLkAx_pGgLNwJpwEBJWK.dNzM4QDLwgTN0czW}`
 
 
 
