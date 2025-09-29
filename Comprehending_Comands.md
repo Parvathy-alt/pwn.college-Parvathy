@@ -72,30 +72,32 @@ Flag : `pwn.college{oHR6b2C4e3rIZX69lVnMPl-Q2Sh.dBTN4QDLwgTN0czW}`
 
 ## Filesystem Quest
 
-First we start with the root directory `cd /` then we use the `ls` command to list all the files present in the root directory 
-Then we read the files and cat a file called `CLUE` , then ` cd  /usr/share/help/ko`
+In this challenge we learn how to use the commands `ls-a` , `cat` , `cd` etc effectively to obtain the flag , below given screenshots represnt the same 
+Flag :`pwn.college{UmcNQI9iibhVYdJRZBI6GqoV2GK.dljM4QDLwgTN0czW}`
 
-After which we `ls` again to find the file `BRIEF` 
-`cat BRIEF` reads:
-`Yahaha, you found me!
-The next clue is in: /usr/local/lib/python3.8/dist-packages/send2trash/__pycache__
-The next clue is **delayed** --- it will not become readable until you enter the directory with 'cd'.
-`
-Then  `cd /usr/local/lib/python3.8/dist-packages/send2trash/__pycache__`  and `ls-a`
-reads a set of files out of which we use ` cat .ALERT` to get the next output :
-`Congratulations, you found the clue!
-The next clue is in: /usr/lib/python3/dist-packages/sage/numerical/backends/__pycache__`
-
-Then we run `cd  /usr/lib/python3/dist-packages/sage/numerical/backends/__pycache__` and ` ls -a`
-according to which  we get `cat NUGGET` and the output 
-`Great sleuthing!
-The next clue is in: /usr/lib/jvm/java-17-openjdk-amd64/legal/java.rmi`
-and just go ahead till we reach `cat EVIDENCE` which finally will give us the required flag 
-which is : `pwn.college{UmcNQI9iibhVYdJRZBI6GqoV2GK.dljM4QDLwgTN0czW}`
 
 `<img width="1317" height="720" alt="Screenshot 2025-09-29 at 11 56 08 am" src="https://github.com/user-attachments/assets/329874fd-bdf0-4440-ac1c-696b9db2b10b" />
 
 <img width="951" height="505" alt="Screenshot 2025-09-29 at 11 55 56 am" src="https://github.com/user-attachments/assets/f027a6d3-92d8-4ab2-bdea-9e54efbeb699" />
+
+##  Making Directories
+
+We learn about a command called "mkdir" to make directories . In this challlenge we make a directory called `/tmp/pwn` in which we make a file called `college` and later run the code`/challenge/run` to check whether the file has been created succesfully and on completion we receive a flag .
+Flag : `pwn.college{cYcGI1mTV-BA3yNlSUsSL8IRzDo.dFzM4QDLwgTN0czW}`
+
+##Finding Files 
+
+To find a file in the provided system we use `find` command . On running the command , `find / -name flag` , many files appear on the 
+screen out of which we use `cat` commmand to find out which has the required flag 
+In the given case the flag was found in the `/usr/lib/python3/dist-packages/sage/modules/__pycache__/flag` file 
+Flag : `pwn.college{wBFUcuFlmeYW2tQqIzDe0BJetqB.dJzM4QDLwgTN0czW}`
+
+## Linking Files
+
+In this challenge we are taught to link files to one another . Executing the follwing code will retrive us the flag which marks the successful completion of this challenge : 
+`ln -s /flag not-the-flag`
+`/challenge/catflag`
+Flag : `pwn.college{kDfFXk0uRLO-3dbrgexuZ_IoiU9.dlTM1UDLwgTN0czW}`
 
 
 
