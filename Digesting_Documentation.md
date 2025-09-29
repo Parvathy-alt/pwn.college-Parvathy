@@ -10,7 +10,7 @@ Flag : `pwn.college{Ir6ASnSgR1SDR-zBYX3S8zD6Qlr.dRjM5QDLwgTN0czW}`
 ## Learning Complex Usage 
 
 
-## READING MANUALS
+## Reading Manuals
 
 In this challenge we learn how to use the man command which is used to read manuals . On running `man challenge` we recieve multiple descriptions out of which the one which is required 
 to attain the flag is 
