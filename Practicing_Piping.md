@@ -59,4 +59,49 @@ We use the above mentioned operator along with pipe(|) operator to obtain the fl
 Flag : `pwn.college{k3RX-phRe_RObb8Y8eZAvTVR_jh.dVDM5QDLwgTN0czW}`
 
 
+## Filtreing with grep -v
+
+Use grep -v to remove lines that contain a pattern. In this challenge, /challenge/run prints one real flag plus 1000+ decoy lines that include the word DECOY; pipe the program through grep -v 'DECOY' to filter out the decoys and reveal the real flag.
+` /challenge/run | grep -v "DECOY"`
+Flag:`pwn.college{4c2UmgvS6-zyzamEpaIFaFlDE-j.QX4ETM3EDLwgTN0czW}`
+
+
+## Duplicating Piped Data with Tee
+
+We learn about 'tee' command in this challenge , it duplicates data flowing through your pipes to any number of files provided on the command line.
+The commands required for this challenge is as follows : 
+`/challenge/pwn | tee find | /challenge/college` where `find` is the command output 
+`cat find`  which gives us the output :
+`/challenge/pwn --secret [SECRET_ARG]`
+`SECRET_ARG should be "A9Pkspou"`
+After which : `/challenge/pwn --secret A9Pkspou | /challenge/college` .
+Flag : `pwn.college{A9Pkspou7yjFMJ0hfM3dx-oB9JL.dFjM5QDLwgTN0czW}`
+
+
+## Process Substitution for Input
+
+Process substitution (<(command)) lets you use the output of a command as if it were a file. 
+That means you don’t have to save things into temporary files before comparing them.
+`diff <(/challenge/print_decoys) <(/challenge/print_decoys_and_flag)`
+Flag:`pwn.college{sICtjxNWupnHwJc9PVOnv51ch-0.QX2AzM4EDLwgTN0czW}`
+
+## Writing to Multiple Programs
+
+According to the challenge given , the output from `/challenge/hack` must be piped to the 2 commands `/challenge/planet` and `/challenge/the` where `/challenge/the` is the command output
+On running : `/challenge/hack | tee >(/challenge/the) | /challenge/planet` we get a flag which marks the successfull completion of the the challenge 
+Flag : `pwn.college{UYL1FVfq-eLlZSsauhDBi7QDt_n.dBDO0UDLwgTN0czW}`
+
+
+## Split-Piping Stderr  And Stdout
+
+Initially, I utilized `2>` combined with `>(/challenge/the`) to direct standard error to the `/challenge/the` program.Later we use pipe(|) to stdout to `/challenge/planet`
+The command is as follows : `/challenge/hack 2> >(/challenge/the) | /challenge/planet`
+Flag : `pwn.college{UH1UBoKi0khlhTm9DhWvGVy5Bw7.dFDNwYDLwgTN0czW}`
+
+
+
+
+
+
+
 
