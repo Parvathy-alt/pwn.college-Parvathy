@@ -4,6 +4,7 @@
 
 The challenge shows us how command-line arguments (like -a for ls) change a program’s behavior.
 To complete the following task it is required to run the command `/challenge/challenge` alongside the command `--giveflag` to obtain the flag 
+
 Flag : `pwn.college{Ir6ASnSgR1SDR-zBYX3S8zD6Qlr.dRjM5QDLwgTN0czW}`
 
 
@@ -17,6 +18,7 @@ to attain the flag is
 ` --hxibcn NUM
 print the flag if NUM is 031`
 According the the following description we run the command "/challenge/challenge --hxibcn 031" to get the flag 
+
 Flag :  `pwn.college{0hxib3JcT1npV_Wwkogyawd3e8B.dRTM4QDLwgTN0czW}`
 
 ## Searching Manuals
@@ -24,6 +26,7 @@ Flag :  `pwn.college{0hxib3JcT1npV_Wwkogyawd3e8B.dRTM4QDLwgTN0czW}`
 We run `man challenge` to find the location of the flag amongst the manuals , specifically to filter out the flag we use `/flag` which leads us to a command `--vtds This argument will give you the flag` is found 
 After which we type the command : 
 `/challenge/challenge   --vtds` which gives us the flag , which is 
+
 Flag : ` pwn.college{U56U6Tnk7za02WSFBFJz6AFTq_X.dVTM4QDLwgTN0czW}`
 
 ## Searching for Manuals
@@ -51,12 +54,14 @@ x86_64 (8)           - change reported architecture in new program environment a
 
 Out of which we can observe that "fiubkatmhe" command will obtain us the flag 
 To get the required flag : `/challenge/challenge  --fiubka 646` is printed 
+
 Flag :`pwn.college{MfYiubkEXO6Z4UQGVaHtm6h0eOI.dZTM4QDLwgTN0czW}`
 
 ## Helpful Programs
 
 We run the command `/challenge/challenge --help` which provides us a list of optional arguments eg : -h,--help and -p, --print-value
 After which we type the command : "/challenge/challenge -p" which  provides us with a secret value ie 278 . Once we recive that value we execute the command : `/challenge/challenge -g 278`.
+
 Flag : `pwn.college{EM2oLW7jmi8Q1DU0_M2nIQUacdY.ddjM4QDLwgTN0czW}`
 
 ## Help For Builtins.
@@ -64,4 +69,5 @@ Flag : `pwn.college{EM2oLW7jmi8Q1DU0_M2nIQUacdY.ddjM4QDLwgTN0czW}`
 In this challenge we learned about builtins and where they can be used . Built-in commands are executed like regular commands, but the shell processes them internally 
 rather than starting external programs.
 We execute the command `help challenge` after which we recieve a secret command and execute it as well `challenge --secret Qt9oB8rk`
+
 Flag : `pwn.college{Qt9oB8rkN6NUlRbdOXNEy0htKSV.dRTM5QDLwgTN0czW}`
