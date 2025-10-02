@@ -98,6 +98,11 @@ Initially, I utilized `2>` combined with `>(/challenge/the`) to direct standard 
 The command is as follows : `/challenge/hack 2> >(/challenge/the) | /challenge/planet`
 Flag : `pwn.college{UH1UBoKi0khlhTm9DhWvGVy5Bw7.dFDNwYDLwgTN0czW}`
 
+## Named Pipes 
+
+`mkfifo /tmp/flag_fifo` Creates a named pipe (FIFO) then you use cat command to read the file , `/challenge/run > /tmp/flag_fifo` redirects the standard output to FIFO
+Flag: `pwn.college{M0eVvAKVg7P0z-BK-30poAvDewK.QXzMzM4EDLwgTN0czW}`
+
 
 
 
