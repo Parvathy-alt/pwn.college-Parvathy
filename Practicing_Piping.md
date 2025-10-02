@@ -100,7 +100,15 @@ Flag : `pwn.college{UH1UBoKi0khlhTm9DhWvGVy5Bw7.dFDNwYDLwgTN0czW}`
 
 ## Named Pipes 
 
-`mkfifo /tmp/flag_fifo` Creates a named pipe (FIFO) then you use cat command to read the file , `/challenge/run > /tmp/flag_fifo` redirects the standard output to FIFO
+`mkfifo /tmp/flag_fifo` Creates a named pipe (FIFO) then you use cat command to read the file , `/challenge/run > /tmp/flag_fifo` redirects the standard output to FIFO. 
+You'll get this output : You're successfully redirecting /challenge/run to a FIFO at /tmp/flag_fifo! 
+Bash will now try to open the FIFO for writing, to pass it as the stdout of 
+/challenge/run. Recall that operations on FIFOs will *block* until both the 
+read side and the write side is open, so /challenge/run will not actually be 
+launched until you start reading from the FIFO!
+You've correctly redirected /challenge/run's stdout to a FIFO at 
+/tmp/flag_fifo! Here is your flag:
+pwn.college{M0eVvAKVg7P0z-BK-30poAvDewK.QXzMzM4EDLwgTN0czW}
 Flag: `pwn.college{M0eVvAKVg7P0z-BK-30poAvDewK.QXzMzM4EDLwgTN0czW}`
 
 
