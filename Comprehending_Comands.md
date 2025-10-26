@@ -97,7 +97,7 @@ We learn about a command called "mkdir" to make directories . In this challlenge
 
 Flag : `pwn.college{cYcGI1mTV-BA3yNlSUsSL8IRzDo.dFzM4QDLwgTN0czW}`
 
-##Finding Files 
+## Finding Files 
 
 To find a file in the provided system we use `find` command . On running the command , `find / -name flag` , many files appear on the 
 screen out of which we use `cat` commmand to find out which has the required flag 
